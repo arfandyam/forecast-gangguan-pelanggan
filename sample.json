@@ -1,0 +1,4 @@
+{
+    "tanggal" : "2023-04-03", //string
+    "kode_posko": 1, //integer
+}
