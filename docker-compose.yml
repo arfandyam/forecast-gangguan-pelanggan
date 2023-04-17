@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  mlapp:
+    container_name: forecast-gangguanpelanggan
+    image: rfun-test/forecast-gangguanpelanggan
+    ports:
+      - "5000:5000"
+    build:
+      context: .
+      dockerfile: DockerFile

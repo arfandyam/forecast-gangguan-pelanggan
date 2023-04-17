@@ -134,6 +134,9 @@ def forecast_this():
     # print(df_show)
     return render_template('forecast.html', tables=[df_show.to_html(classes="data", header="true")])
 
+@app.route("/test")
+def test():
+    return "Test"
 # def html_table():
 # predict(list_laporan_gangguan)
 if __name__ == '__main__':
