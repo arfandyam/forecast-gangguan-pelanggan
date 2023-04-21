@@ -5,6 +5,7 @@ import pandas as pd
 import datetime as dt
 from lightgbm import LGBMRegressor
 import numpy as np
+from dateutil import tz
 
 app = Flask(__name__)
 
@@ -136,9 +137,8 @@ def forecast_this():
 
 @app.route("/test")
 def test():
-    return "Test"
+    return pd.date_range(dt.date.today(), periods=30).strftime("%d/%m/%Y %I:%M:%S").tolist()
 # def html_table():
 # predict(list_laporan_gangguan)
-if __name__ == '__main__':
-    # forecast_this(list_laporan_gangguan)
+if __name__ == '__main__':    
     app.run(debug=True)
